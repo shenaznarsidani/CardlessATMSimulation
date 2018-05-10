@@ -38,6 +38,7 @@ public class DisplayQR extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState)
     {
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displayqr);
         FirebaseDatabase.getInstance().getReference().child("ATM").child("HYD12").addValueEventListener(new ValueEventListener()

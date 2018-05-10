@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".DisplayQR" />
         <activity android:name=".TransactionStatus" />
-        <activity android:name=".TransactionCompleted"></activity>
+        <activity android:name=".TransactionCompleted" />
+        <activity android:name=".EnterAccessCode"></activity>
     </application>
 
 </manifest>

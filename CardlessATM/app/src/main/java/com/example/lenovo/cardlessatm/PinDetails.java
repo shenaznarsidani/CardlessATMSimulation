@@ -18,11 +18,15 @@ class AccountDetails
 {
     int acc_no;
     float balance;
+    String accesscode;
     int mobile;
     int pin;
     String currentTransactionID;
     String transactionIDList;
-    int accesscode;
+
+    AccountDetails(){
+
+    }
 }
 public class PinDetails extends AppCompatActivity implements View.OnClickListener{
 

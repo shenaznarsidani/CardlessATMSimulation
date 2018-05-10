@@ -68,14 +68,25 @@ public class methodWithdrawal extends AppCompatActivity implements View.OnClickL
         sms.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
+                Intent intent = new Intent(methodWithdrawal.this, AccessCode.class);
                 amt =Float.parseFloat(getIntent().getExtras().getString("amount"));
                 acc_type=getIntent().getExtras().getString("acc_type");
                 pin=Integer.parseInt(getIntent().getExtras().getString("pin"));
                 acc=Integer.parseInt(getIntent().getExtras().getString("acc"));
                 method_used="access";
+                System.out.println("pin="+pin);
+                System.out.println("amt="+amt);
+                System.out.println("acc="+acc);
+                System.out.println("acc_type="+acc_type);
 
-                Intent activityChangeIntent = new Intent(methodWithdrawal.this, AccessCode.class);
-                startActivity(activityChangeIntent);
+
+
+                intent.putExtra("amount",String.valueOf(amt));
+                intent.putExtra("pin",String.valueOf(pin));
+                intent.putExtra("acc_type",acc_type);
+                intent.putExtra("acc",String.valueOf(acc));
+                intent.putExtra("method_used",method_used);
+                startActivity(intent);
             }
             }
 
